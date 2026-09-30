@@ -51,6 +51,8 @@ class WelcomeWindow extends Adw.ApplicationWindow {
         const osReleaseContents = osRelease.load_contents(null)[1];
         const osReleaseLines = osReleaseContents.toString().split('\n');
         const osReleaseLineName = osReleaseLines.find(line => line.startsWith('NAME=')).split('=')[1].replace(/"/g, '');
+        const osReleaseLineLogo = osReleaseLines.find(line => line.startsWith('LOGO='));
+        const osReleaseLineLogoName = osReleaseLineLogo ? osReleaseLineLogo.split('=')[1].replace(/"/g, '') : 'lingmo-logo-icon';
 
         const title = _('Welcome to %s').replace('%s', osReleaseLineName);
         super({
@@ -63,7 +65,7 @@ class WelcomeWindow extends Adw.ApplicationWindow {
 
         const statusPage = new Adw.StatusPage({
             title,
-            iconName: 'fedora-logo-icon',
+            iconName: osReleaseLineLogoName,
             description: _('This live media can be used to install %s or as a temporary system. Installation can be started at any time by launching the install app.').replace('%s', osReleaseLineName),
         });
         this.content.set_child(statusPage);

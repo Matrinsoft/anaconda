@@ -40,6 +40,7 @@ dist_config_DATA    = \
 	fedora-workstation.conf \
 	fedora-xfce.conf \
 	fedora.conf \
+	lingmo.conf \
 	navix.conf \
 	ovirt.conf \
 	rhel.conf \

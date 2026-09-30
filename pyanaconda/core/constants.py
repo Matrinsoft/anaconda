@@ -286,7 +286,7 @@ PAYLOAD_STATUS_INVALID_SOURCE = N_("Error setting up repositories")
 PAYLOAD_STATUS_CHECKING_SOFTWARE = N_("Checking software dependencies...")
 
 # Window title text
-WINDOW_TITLE_TEXT = N_("Anaconda Installer")
+WINDOW_TITLE_TEXT = N_("Lingmo OS Installer")
 
 # Types of time sources.
 TIME_SOURCE_SERVER = "SERVER"

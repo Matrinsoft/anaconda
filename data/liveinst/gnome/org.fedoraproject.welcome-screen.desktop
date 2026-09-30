@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=Welcome to Fedora
-Icon=fedora-logo-icon
+Name=Welcome to Lingmo OS
+Icon=lingmo-logo-icon
 Exec=/usr/share/anaconda/gnome/fedora-welcome
 Terminal=false
 Type=Application
