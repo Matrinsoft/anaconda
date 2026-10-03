@@ -45,8 +45,8 @@ jobs:
                 find ~/rpmbuild/RPMS ~/rpmbuild/SRPMS -type f -name "*.rpm" -exec cp {} /out/ \; \
                   2>/dev/null || true
               fi
-              if ! find /out -type f -name "*.rpm" -print -quit | grep -q .; then
-                tar czf "/out/anaconda-${GITHUB_SHA}.tar.gz" \
+              if [ "$(find /out -type f -name "*.rpm" | wc -l)" -eq 0 ]; then
+                tar czf "/out/anaconda-$(git rev-parse --short HEAD).tar.gz" \
                   --exclude=.git --exclude=artifact-out .
               fi
               ls -la /out
