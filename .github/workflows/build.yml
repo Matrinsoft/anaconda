@@ -32,8 +32,9 @@ jobs:
               dnf install -y -q --setopt=install_weak_deps=False \
                 rpm-build rpmdevtools dnf-plugins-core make git tar gzip xz findutils \
                 autoconf automake libtool gettext glib2-devel gobject-introspection-devel \
-                glade-devel gtk3-devel rpm-devel libarchive-devel python3-polib python3-devel \
-                python3-build python3-setuptools python3-pip nodejs npm
+                glade-devel gtk3-devel rpm-devel libarchive-devel desktop-file-utils \
+                glib2-doc gtk-doc gtk3-devel-docs python3-polib python3-devel python3-build \
+                python3-setuptools python3-pip nodejs npm
               python3 -m pip install --disable-pip-version-check --no-cache-dir pocketlint
               git config --global --add safe.directory /src
               case "$PACKAGE_NAME" in
